@@ -128,7 +128,7 @@ prompt
 export PATH=/usr/local/sphinx/bin:$PATH
 
 export JDK_HOME=/usr/lib/jvm/java-6-sun
-
+EDITOR=vi
 source /var/www/jovoto/automation/shell/aliases
 source ~/.alias
 cd /var/www
