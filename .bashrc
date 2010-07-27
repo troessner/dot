@@ -132,4 +132,5 @@ EDITOR=vi
 source /var/www/jovoto/automation/shell/aliases
 source ~/.alias
 source /var/www/jovoto/platforms/script/aliases
+HISTSIZE=3000
 cd /var/www
