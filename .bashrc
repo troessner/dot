@@ -131,5 +131,5 @@ export JDK_HOME=/usr/lib/jvm/java-6-sun
 EDITOR=vi
 source /var/www/jovoto/automation/shell/aliases
 source ~/.alias
+source /var/www/jovoto/platforms/script/aliases
 cd /var/www
-
