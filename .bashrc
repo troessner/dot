@@ -121,14 +121,14 @@ local RED="\[\033[31;31m\]"
 
 
 PS1="$LIGHT_GRAY{-$RED\u$LIGHT_GRAY-|-$GREEN\h$LIGHT_GRAY-} => [$LIGHT_BLUE\w$LIGHT_GRAY]
-$LIGHT_BLUE( $ )  $GREEN"
+$LIGHT_BLUE( $ ) $GREEN"
 }
 prompt
 
 export PATH=/usr/local/sphinx/bin:$PATH
 
 export JDK_HOME=/usr/lib/jvm/java-6-sun
-EDITOR=vi
+export EDITOR=vi
 source /var/www/jovoto/automation/shell/aliases
 source ~/.alias
 source /var/www/jovoto/platforms/script/aliases
