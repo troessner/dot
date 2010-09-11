@@ -40,12 +40,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+# We have color support; assume it's compliant with Ecma-48
+# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+# a case would tend to support setf rather than setaf.)
+color_prompt=yes
     else
-	color_prompt=
+color_prompt=
     fi
 fi
 
@@ -97,40 +97,4 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-function prompt
-{
-local GRAY="\[\033[1;30m\]"
-local LIGHT_GRAY="\[\033[0;37m\]"
-local CYAN="\[\033[0;36m\]"
-local LIGHT_CYAN="\[\033[1;36m\]"
-local NO_COLOUR="\[\033[0m\]"
-local BLUE="\[\033[0;34m\]"
-local LIGHT_BLUE="\[\033[1;34m\]"
-local RED="\[\033[0;31m\]"
-local LIGHT_RED="\[\033[1;31m\]"
-local GREEN="\[\033[0;32m\]"
-local LIGHT_GREEN="\[\033[1;32m\]"
-local PURPLE="\[\033[0;35m\]"
-local LIGHT_PURPLE="\[\033[1;35m\]"
-local BROWN="\[\033[0;33m\]"
-local YELLOW="\[\033[1;33m\]"
-local BLACK="\[\033[0;30m\]"
-local WHITE="\[\033[1;37m\]"
-local RED="\[\033[31;31m\]"
-
-
-PS1="$LIGHT_GRAY{-$RED\u$LIGHT_GRAY-|-$GREEN\h$LIGHT_GRAY-} => [$LIGHT_BLUE\w$LIGHT_GRAY]
-$LIGHT_BLUE( $ ) $GREEN"
-}
-prompt
-
-export PATH=/usr/local/sphinx/bin:$PATH
-
-export JDK_HOME=/usr/lib/jvm/java-6-sun
-export EDITOR=vi
-source /var/www/jovoto/automation/shell/aliases
-source ~/.alias
-source /var/www/jovoto/platforms/script/aliases
-HISTSIZE=3000
-cd /var/www
+source .bash_profile
