@@ -1,7 +1,6 @@
-alias gr='grep -irsI'
+alias gre='grep -irsI'
 alias g='git'
 alias la='ls -la'
-alias aptana='cd ~/Aptana\ Studio\ 3; ./AptanaStudio3 -Xmx1500M &'
 # rails
 alias reset_db='rake db:schema:load && rake db:seed'
 alias tc='rake db:test:clone'
@@ -25,7 +24,11 @@ alias srg='script/rails g'
 # groovy
 alias gsh=groovysh
 # groovy / grails
+alias gr='grails'
 alias grsh='grails shell'
 alias gsh='groovysh'
 alias sts='cd ~/springsource/sts-2.3.2.RELEASE; ./STS &'
 alias grtr='firefox target/test-reports/html/index.html'
+alias grcc='grails create-controller'
+alias grcdc='grails create-domain-class'
+alias grra='grails run-app'
