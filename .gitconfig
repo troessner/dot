@@ -11,6 +11,7 @@
   sh = show
   pl = pull
   ps = push
+  ulc= reset --soft HEAD^
 [user]
   name = Timo Rössner
   email = timo.roessner@googlemail.com
