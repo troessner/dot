@@ -1,11 +1,16 @@
 [alias]
   ci = commit
+  s  = status
   st = status
   a  = add
   d  = diff
   co = checkout
   b  = branch
   l  = log
+  lp = log --decorate --pretty=oneline --abbrev-commit
+  sh = show
+  pl = pull
+  ps = push
 [user]
         name = Timo Rössner
         email = troessner@jovoto.com
