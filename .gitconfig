@@ -12,8 +12,8 @@
   pl = pull
   ps = push
 [user]
-        name = Timo Rössner
-        email = troessner@jovoto.com
+  name = Timo Rössner
+  email = timo.roessner@googlemail.com
 [push]
         default = tracking                                                                                                                                                                      
 [color]                                                                                                                                                                                         
