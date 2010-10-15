@@ -4,6 +4,8 @@ alias la='ls -la'
 alias gre='grep -irsI'
 alias g='git'
 alias 'cd..'='cd ..'
+# rackup
+alias ra='rackup'
 # rails
 alias res='touch tmp/restart.txt'
 alias tl='tail -f log/development.log'
