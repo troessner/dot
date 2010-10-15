@@ -25,6 +25,8 @@ alias bec='bundle exec cucumber'
 alias src='script/rails c'
 alias srs='script/rails s'
 alias srg='script/rails g'
+#ruby
+alias i='irb'
 # groovy
 alias gsh=groovysh
 # groovy / grails
