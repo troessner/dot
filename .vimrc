@@ -9,3 +9,6 @@ map ,# :call CommentLineToEnd('#')<CR>+
 set list
 set number
 set autoindent
+syntax on
+filetype plugin on
+let mapleader = ","
