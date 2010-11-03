@@ -1,14 +1,15 @@
 # OS
 alias ll='ls -lhF --color=tty'
 alias la='ls -la'
-alias gre='grep -irsI'
+alias gr='grep -ir'
 alias g='git'
+alias tf='tail -f -n 200'
 alias 'cd..'='cd ..'
 # rackup
 alias ra='rackup'
 # rails
 alias res='touch tmp/restart.txt'
-alias tl='tail -f log/development.log'
+alias tfld='tail -f log/development.log'
 # rails 2 specific
 alias r='rake'
 alias rdtc='rake db:test:clone'
@@ -30,11 +31,10 @@ alias i='irb'
 # groovy
 alias gsh=groovysh
 # groovy / grails
-alias gr='grails'
-alias grsh='grails shell'
+alias gra='grails'
+alias grash='grails shell'
 alias gsh='groovysh'
-alias sts='cd ~/springsource/sts-2.3.2.RELEASE; ./STS &'
 alias grtr='firefox target/test-reports/html/index.html'
-alias grcc='grails create-controller'
-alias grcdc='grails create-domain-class'
-alias grra='grails run-app'
+alias gracc='grails create-controller'
+alias gracdc='grails create-domain-class'
+alias grara='grails run-app'
