@@ -8,19 +8,21 @@
   b  = branch
   l  = log
   lp = log --decorate --pretty=oneline --abbrev-commit
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
   sh = show
   pl = pull
   ps = push
   ulc= reset --soft HEAD^
+  r  = reset
 [user]
   name = Timo Rössner
   email = timo.roessner@googlemail.com
 [push]
   default = tracking
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+  ui = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -30,7 +32,11 @@
   frag = magenta bold
   old = red bold
   new = green bold
+  whitespace = red reverse
 [color "status"]
   added = yellow
   changed = green
   untracked = cyan
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
