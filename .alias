@@ -5,6 +5,9 @@ alias gr='grep -ir'
 alias g='git'
 alias tf='tail -f -n 200'
 alias 'cd..'='cd ..'
+alias acs='apt-cache search'
+alias agi='sudo apt-get install'
+alias agu='sudo apt-get update'
 # rackup
 alias ra='rackup'
 # rails
