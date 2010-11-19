@@ -8,7 +8,7 @@ map <F2> :NERDTreeToggle<CR>
 map ,# :call CommentLineToEnd('#')<CR>+
 set list
 set number
-set autoindent
+set noautoindent
 syntax on
 filetype plugin on
 let mapleader = ","
