@@ -1,6 +1,6 @@
 # OS
 alias ll='ls -lhF --color=tty'
-alias la='ls -la'
+alias la='ls -lahF --color=tty'
 alias gr='grep -ir'
 alias g='git'
 alias tf='tail -f -n 200'
