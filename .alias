@@ -25,7 +25,8 @@ alias bes='bundle exec rspec'
 alias bec='bundle exec cucumber'
 alias bo='bundle open'
 alias bs='bundle show'
-# rails 2 specific
+alias bu='bundle update'
+## rails 2 specific
 alias r='rake'
 alias rdtc='rake db:test:clone'
 alias rdm='rake db:migrate'
