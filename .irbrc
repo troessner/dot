@@ -1,27 +1,26 @@
-# Remove the annoying irb(main):001:0 and replace with >>
 IRB.conf[:PROMPT_MODE]  = :SIMPLE
-# Load the readline module.
 IRB.conf[:USE_READLINE] = true
-# Automatic Indentation
 IRB.conf[:AUTO_INDENT]=true
-
-# Save History between irb sessions
-require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 
-require 'rubygems'
-require 'pp'
-require 'ap'
+begin
+  require 'rubygems'
+  require 'pp'
+  require 'irb/ext/save-history'
+  require 'ap'
+  require 'hirb'
+  require 'hirb/import_object'
+  require 'wirble'
+  require 'irb/completion'
+rescue LoadError => e
+  puts "Gems missing: #{e}"
+end
 
-# Draw ASCII tables
-require 'hirb'
-require 'hirb/import_object'
 Hirb.enable
 extend Hirb::Console
-
-# Tab Completion
-require 'irb/completion'
+Wirble.init
+Wirble.colorize
 
 # Method to pretty-print object methods
 # Coded by sebastian delmont
@@ -64,14 +63,6 @@ class Object
   end
 end
 
-# Wirble is a set of enhancements for irb
-# http://pablotron.org/software/wirble/README
-# Implies require 'pp', 'irb/completion', and 'rubygems'
-require 'wirble'
-Wirble.init
-
-## Enable colored output
-Wirble.colorize
 
 # Clear the screen
 def clear
@@ -80,12 +71,3 @@ end
 
 # Shortcuts
 alias c clear
-
-
-# http://sketches.rubyforge.org/
-require 'sketches'
-Sketches.config :editor => 'vim'
-
-# Bond (Bash-like tab completion)
-require 'bond'
-Bond.start
