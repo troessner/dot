@@ -28,6 +28,7 @@ alias bec='bundle exec cucumber'
 alias bo='bundle open'
 alias bs='bundle show'
 alias bu='bundle update'
+alias cf='cucumber features/'
 ## rails 2 specific
 alias r='rake'
 alias rdtc='rake db:test:clone'
@@ -39,6 +40,7 @@ alias sg='script/generate'
 alias src='script/rails c'
 alias srs='script/rails s'
 alias srg='script/rails g'
+alias rs='rspec spec/'
 #ruby
 alias i='irb'
 # groovy
