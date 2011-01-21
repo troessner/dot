@@ -11,7 +11,7 @@ alias acs='apt-cache search'
 alias agi='sudo apt-get install'
 alias agu='sudo apt-get update'
 #cassandra
-alias cass='rm -r /var/lib/cassandra/commitlog && rm -r /var/lib/cassandra/data && rm -r /var/lib/cassandra/saved_caches && cd /opt/apache-cassandra-0.7.0-rc2/ && bin/cassandra -f'
+alias cass='rm -r /var/lib/cassandra/commitlog && rm -r /var/lib/cassandra/data && rm -r /var/lib/cassandra/saved_caches && cd /opt/apache-cassandra-0.7.0/ && bin/cassandra -f'
 # git
 alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
 # rackup
@@ -29,6 +29,7 @@ alias bo='bundle open'
 alias bs='bundle show'
 alias bu='bundle update'
 alias cf='cucumber features/'
+alias gem_release='rake build && rake gemspec:generate && rake version:bump:patch && rake release'
 ## rails 2 specific
 alias r='rake'
 alias rdtc='rake db:test:clone'
