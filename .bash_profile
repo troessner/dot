@@ -37,4 +37,7 @@ source ~/.alias
 
 HISTSIZE=3000
 
+ssh-add ~/.ssh/private_github/private_github
+ssh-add ~/.ssh/source_repo/source_repo
+
 cd /var/www/
