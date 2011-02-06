@@ -23,13 +23,8 @@ function prompt {
 }
 prompt
 
-export GEM_PATH=/var/lib/gems/1.8/bin/
-export PATH=$GEM_PATH:$PATH
-export PATH=/usr/local/sphinx/bin:$PATH
 export JDK_HOME=/usr/lib/jvm/java-6-sun
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export GRAILS_HOME=/opt/grails-1.3.4/
-export PATH=$PATH:$GRAILS_HOME/bin
 
 export EDITOR=vi
 
