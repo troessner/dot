@@ -16,32 +16,52 @@ alias cass='rm -r /var/lib/cassandra/commitlog && rm -r /var/lib/cassandra/data 
 alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
 # rackup
 alias ra='rackup'
-# rails
+# passenger
 alias res='touch tmp/restart.txt'
-alias tfld='tail -f log/development.log'
-alias rr='rake routes'
+# rails in general
+alias tfd='tail -f log/development.log'
+alias tft='tail -f log/test.log'
+## jeweler
+alias gem_release='rake build && rake gemspec:generate && rake version:bump:patch && rake release'
+#ruby
+alias i='irb'
+# rails scripts
+sc () {
+  if [ -f ./script/rails ]; then
+    rails c $@
+  else
+    ./script/console $@
+  fi
+}
+
+sg () {
+  if [ -f ./script/rails ]; then
+    rails g $@
+  else
+    ./script/generate $@
+  fi
+}
+
+ss () {
+  if [ -f ./script/rails ]; then
+    rails s $@
+  else
+    ./script/server $@
+  fi
+}
+# rails 3 specific
 alias bi='bundle install'
+alias bu='bundle update'
 alias bx='bundle exec'
 alias ber='bundle exec rake'
 alias bes='bundle exec rspec'
-alias bec='bundle exec cucumber'
+alias bec='bundle exec cucumber features'
 alias bo='bundle open'
 alias bs='bundle show'
-alias bu='bundle update'
-alias cf='cucumber features/'
-alias gem_release='rake build && rake gemspec:generate && rake version:bump:patch && rake release'
 ## rails 2 specific
 alias r='rake'
+alias rr='rake routes'
 alias rdtc='rake db:test:clone'
 alias rdm='rake db:migrate'
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-# rails 3 specific
-alias src='script/rails c'
-alias srs='script/rails s'
-alias srg='script/rails g'
 alias rs='rspec spec/'
-#ruby
-alias i='irb'
-
+alias cf='cucumber features/'
