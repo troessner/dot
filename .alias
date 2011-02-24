@@ -44,13 +44,4 @@ alias srg='script/rails g'
 alias rs='rspec spec/'
 #ruby
 alias i='irb'
-# groovy
-alias gsh=groovysh
-# groovy / grails
-alias gra='grails'
-alias grash='grails shell'
-alias gsh='groovysh'
-alias grtr='firefox target/test-reports/html/index.html'
-alias gracc='grails create-controller'
-alias gracdc='grails create-domain-class'
-alias grara='grails run-app'
+
