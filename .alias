@@ -53,9 +53,11 @@ ss () {
 alias bi='bundle install'
 alias bu='bundle update'
 alias bx='bundle exec'
+alias ber='bundle exec rspec'
+alias bec='bundle exec cucumber'
 alias ber='bundle exec rake'
-alias bes='bundle exec rspec'
-alias bec='bundle exec cucumber features'
+alias bers='bundle exec rspec spec/'
+alias becf='bundle exec cucumber features/'
 alias bo='bundle open'
 alias bs='bundle show'
 ## rails 2 specific
