@@ -68,3 +68,5 @@ alias rdtc='rake db:test:clone'
 alias rdm='rake db:migrate'
 alias rs='rspec spec/'
 alias cf='cucumber features/'
+# Erlang
+alias erl='rlwrap -a erl'
