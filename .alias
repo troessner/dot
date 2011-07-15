@@ -62,6 +62,7 @@ alias becf='bundle exec cucumber features/'
 alias bo='bundle open'
 alias bs='bundle show'
 alias reset_dev_db='ber db:schema:load && ber db:seed && ber db:factory_fixtures:load'
+alias rt='ber db:test:clone && bers && becf'
 ## rails 2 specific
 alias r='rake'
 alias rr='rake routes'
