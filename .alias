@@ -61,6 +61,7 @@ alias bers='bundle exec rspec spec/'
 alias becf='bundle exec cucumber features/'
 alias bo='bundle open'
 alias bs='bundle show'
+alias reset_dev_db='ber db:schema:load && ber db:seed && ber db:factory_fixtures:load'
 ## rails 2 specific
 alias r='rake'
 alias rr='rake routes'
