@@ -13,6 +13,7 @@
   ls = ls-files
   sh = show
   pl = pull
+  plr = pull --rebase
   ps = push
   ulc= reset --soft HEAD^
   r  = reset
