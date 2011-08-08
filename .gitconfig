@@ -18,7 +18,7 @@
   ulc= reset --soft HEAD^
   r  = reset
 [user]
-  name = Timo Rössner
+  name = Timo Rößner
   email = timo.roessner@googlemail.com
 [push]
   default = tracking
