@@ -12,3 +12,5 @@ set noautoindent
 syntax on
 filetype plugin on
 let mapleader = ","
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
