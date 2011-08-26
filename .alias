@@ -14,6 +14,7 @@ alias agu='sudo apt-get update'
 alias cass='rm -r /var/lib/cassandra/commitlog && rm -r /var/lib/cassandra/data && rm -r /var/lib/cassandra/saved_caches && cd /opt/apache-cassandra-0.7.0/ && bin/cassandra -f'
 # git
 alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
+alias cls_remote_branches='git remote prune origin'
 # rackup
 alias ra='rackup'
 # passenger
