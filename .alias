@@ -63,7 +63,7 @@ alias bxrs='bundle exec rspec spec/'
 alias bxcf='bundle exec cucumber features/'
 alias bo='bundle open'
 alias bs='bundle show'
-alias reset_dev_db='bxr db:schema:load && bxr db:migrate && bxr db:seed && bxr db:factory_fixtures:load'
+alias reset_dev_db='bxr db:drop:all && bxr db:create:all && bxr db:schema:load && bxr db:migrate && bxr db:seed && bxr db:factory_fixtures:load && bxr db:test:clone'
 alias rt='bxr db:test:clone && bxrs && bxcf'
 ## rails 2 specific
 alias r='rake'
