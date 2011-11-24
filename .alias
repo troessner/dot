@@ -64,7 +64,6 @@ alias bxcf='bundle exec cucumber features/'
 alias bo='bundle open'
 alias bs='bundle show'
 alias reset_dev_db='bxr db:drop:all && bxr db:create:all && bxr db:schema:load && bxr db:migrate && bxr db:seed && bxr db:factory_fixtures:load'
->>>>>>> Update aliases.
 alias rt='bxr db:test:clone && bxrs && bxcf'
 alias rtp='bxr db:test:clone && bxr parallel:spec && bxc parallel:features'
 ## rails 2 specific
