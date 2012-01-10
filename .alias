@@ -10,6 +10,7 @@ alias t='tree'
 alias acs='apt-cache search'
 alias agi='sudo apt-get install'
 alias agu='sudo apt-get update'
+alias pnp='git pull --rebase && git push'
 #cassandra
 alias cass='rm -r /var/lib/cassandra/commitlog && rm -r /var/lib/cassandra/data && rm -r /var/lib/cassandra/saved_caches && cd /opt/apache-cassandra-0.7.0/ && bin/cassandra -f'
 # git
