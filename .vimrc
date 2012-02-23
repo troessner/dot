@@ -2,7 +2,9 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set background=dark 
+set background=dark
+" Make vi shell behave more like command prompt
+set shellcmdflag=-ic
 hi Visual cterm=reverse term=reverse
 map <F2> :NERDTreeToggle<CR>
 map ,# :call CommentLineToEnd('#')<CR>+
