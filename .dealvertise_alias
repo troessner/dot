@@ -1,0 +1,2 @@
+alias reset_sat_db='RAILS_ENV=test bxr db:drop:all db:create:all db:migrate db:seed'
+alias reset_nexus_db='bxr db:drop:all db:create:all db:migrate db:seed db:factory_fixtures:load db:test:clone'

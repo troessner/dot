@@ -29,6 +29,7 @@ export JAVA_HOME=/usr/lib/jvm/java-6-sun
 export EDITOR=vi
 
 source ~/.alias
+source ~/.dealvertise_alias
 
 HISTSIZE=3000
 
