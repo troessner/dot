@@ -3,3 +3,4 @@ alias reset_nexus_db='bxr db:drop db:create db:migrate db:seed db:factory_fixtur
 alias reset_publisher_db='bxr db:drop db:create db:migrate db:seed satellite:db:seed'
 alias rt_nucleus='RAILS_ENV=test bxr db:drop db:create db:migrate; bxrs'
 alias rt_satellite='RAILS_ENV=test bxr db:drop db:create db:migrate; bxrs; bxcf'
+alias rt_nexus='bxrdtc; bxrs; bxcf'
