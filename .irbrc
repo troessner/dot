@@ -10,8 +10,10 @@ rescue LoadError => e
   puts "Gems missing: #{e}"
 end
 
-Hirb.enable
-extend Hirb::Console
+if defined? Hirb
+  Hirb.enable
+  extend Hirb::Console
+end
 
 # Clear the screen
 def clear
