@@ -19,7 +19,7 @@ function prompt {
   local RED="\[\033[31;31m\]"
 
   PS1="$LIGHT_GRAY{-$RED\u$LIGHT_GRAY-|-$GREEN\h$LIGHT_GRAY-} => [$LIGHT_BLUE\w$LIGHT_GRAY]
-  $LIGHT_BLUE( $ ) $GREEN"
+  $LIGHT_BLUE( $ ) $BLACK"
 }
 prompt
 
