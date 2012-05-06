@@ -75,3 +75,5 @@ alias rs='rspec spec/'
 alias cf='cucumber features/'
 # Erlang
 alias erl='rlwrap -a erl'
+# Rubinius
+alias list_failing_rubinius_specs='bin/mspec tag --list fails -tx19 :ci_files'
