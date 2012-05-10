@@ -1,4 +1,4 @@
-alias reset_nexus_db='bxr db:drop db:create db:migrate db:seed load db:test:clone'
+alias reset_nexus_db='bxr db:drop db:create db:migrate db:seed db:test:clone'
 alias reset_satellitte_db='bxr db:drop db:create db:migrate db:seed app:db:fixtures:load'
 alias reset_publisher_db='bxr db:drop db:create db:migrate db:seed satellite:db:seed'
 
