@@ -1,3 +1,7 @@
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 function prompt {
   local GRAY="\[\033[1;30m\]"
   local LIGHT_GRAY="\[\033[0;37m\]"
@@ -19,7 +23,7 @@ function prompt {
   local RED="\[\033[31;31m\]"
 
   PS1="$LIGHT_GRAY{-$RED\u$LIGHT_GRAY-|-$GREEN\h$LIGHT_GRAY-} => [$LIGHT_BLUE\w$LIGHT_GRAY]
-  $LIGHT_BLUE( $ ) $BLACK"
+  $LIGHT_BLUE( $ \$(parse_git_branch)) $BLACK"
 }
 prompt
 
