@@ -23,7 +23,7 @@ end
 # Shortcuts
 alias c clear
 
-def load_test_env_nexus
+def load_test_env
   $LOAD_PATH.unshift('.')
   Bundler.require :test
   require 'spec/spec_helper'
