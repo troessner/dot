@@ -1,7 +1,0 @@
-alias reset_nexus_db='bxr db:drop db:create db:migrate db:seed db:test:clone'
-alias reset_satellitte_db='bxr db:drop db:create db:migrate db:seed app:db:fixtures:load'
-alias reset_publisher_db='bxr db:drop db:create db:migrate db:seed satellite:db:seed'
-
-alias rt_nexus='bxrdtc; bxrs && PATH=~/dev/firefox_7/firefox:$PATH bxcf'
-alias rt_nucleus='RAILS_ENV=test bxr db:drop db:create db:migrate; bxrs'
-alias rt_satellite='RAILS_ENV=test bxr db:drop db:create db:migrate; bxrs && PATH=~/dev/firefox_7/firefox:$PATH bxcf'

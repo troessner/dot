@@ -37,3 +37,7 @@ source ~/.dealvertise_alias
 
 HISTSIZE=3000
 
+if test -f ~/.rvm/scripts/rvm; then
+    [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
+fi
+
