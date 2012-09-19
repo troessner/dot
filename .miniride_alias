@@ -1,0 +1,1 @@
+alias rt_backend='bxr db:test:clone && bxrs'

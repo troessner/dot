@@ -40,3 +40,7 @@ HISTSIZE=3000
 if test -f ~/.rvm/scripts/rvm; then
     [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
 fi
+
+if test -f ~/.miniride_alias; then
+  source ~/.miniride_alias
+fi
