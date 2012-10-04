@@ -7,6 +7,8 @@ set statusline+=%*
 let g:syntastic_auto_loc_list=1
 " nerdtree setup
 map <F2> :NERDTreeToggle<CR>
+" Needed for autoclose to work, see https://github.com/tpope/vim-endwise/issues/25
+autocmd FileType ruby,eruby :let g:AutoCloseExpandEnterOn=""
 " My color scheme of choice
 let moria_style = 'white'
 colo moria
