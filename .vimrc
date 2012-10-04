@@ -36,6 +36,8 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 " Highlight settings when selecting text
 hi Visual cterm=reverse term=reverse
+" Enable pasting from external applications like a web browser
+set pastetoggle=<F3>
 
 " Custom functions
 function! s:DiffWithSaved()

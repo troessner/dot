@@ -78,3 +78,4 @@ alias erl='rlwrap -a erl'
 # Rubinius
 alias list_failing_rubinius_specs='bin/mspec tag --list fails -tx19 :ci_files'
 alias rbx_irb='RBXOPT=-X19 bin/irb'
+alias sh_exclusive_commits='git log $(git symbolic-ref -q HEAD) --not master --pretty=oneline --abbrev-commit --decorate'
