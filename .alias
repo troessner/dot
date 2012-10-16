@@ -7,50 +7,13 @@ alias tf='tail -f -n 200'
 alias 'cd..'='cd ..'
 alias pa='ps aux'
 alias t='tree'
-alias acs='apt-cache search'
-alias agi='sudo apt-get install'
-alias agu='sudo apt-get update'
 alias pnp='git pull --rebase && git push'
-#cassandra
-alias cass='rm -r /var/lib/cassandra/commitlog && rm -r /var/lib/cassandra/data && rm -r /var/lib/cassandra/saved_caches && cd /opt/apache-cassandra-0.7.0/ && bin/cassandra -f'
 # git
 alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
 alias cls_remote_branches='git remote prune origin'
-# rackup
-alias ra='rackup'
-# passenger
-alias res='touch tmp/restart.txt'
-# rails in general
-alias tfd='tail -f log/development.log'
-alias tft='tail -f log/test.log'
-## jeweler
-alias gem_release='rake build && rake gemspec:generate && rake version:bump:patch && rake release'
+alias sh_exclusive_commits='git log $(git symbolic-ref -q HEAD) --not master --pretty=oneline --abbrev-commit --decorate'
 #ruby
 alias i='irb'
-# rails scripts
-sc () {
-  if [ -f ./script/rails ]; then
-    rails c $@
-  else
-    ./script/console $@
-  fi
-}
-
-sg () {
-  if [ -f ./script/rails ]; then
-    rails g $@
-  else
-    ./script/generate $@
-  fi
-}
-
-ss () {
-  if [ -f ./script/rails ]; then
-    rails s $@
-  else
-    ./script/server $@
-  fi
-}
 # rails 3 specific
 alias bi='bundle install'
 alias bu='bundle update'
@@ -66,16 +29,9 @@ alias bo='bundle open'
 alias bs='bundle show'
 alias rt='bxr db:test:clone && bxrs && bxcf'
 alias rtp='bxr parallel:prepare && bxr parallel:spec && bxr parallel:features'
-## rails 2 specific
-alias r='rake'
-alias rr='rake routes'
-alias rdtc='rake db:test:clone'
-alias rdm='rake db:migrate'
-alias rs='rspec spec/'
-alias cf='cucumber features/'
+alias rsdb='bxr db:drop db:create db:schema:load'
 # Erlang
 alias erl='rlwrap -a erl'
 # Rubinius
 alias list_failing_rubinius_specs='bin/mspec tag --list fails -tx19 :ci_files'
 alias rbx_irb='RBXOPT=-X19 bin/irb'
-alias sh_exclusive_commits='git log $(git symbolic-ref -q HEAD) --not master --pretty=oneline --abbrev-commit --decorate'
