@@ -1,1 +1,1 @@
-alias rt_backend='bxr db:test:clone && bxrs'
+alias rt_backend='bi; bxrdtc; bxrs && bxcf --format progress'
