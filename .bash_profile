@@ -43,3 +43,6 @@ fi
 if test -f ~/.miniride_alias; then
   source ~/.miniride_alias
 fi
+
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+JDK_HOME=/usr/lib/jvm/java-7-openjdk-i386
