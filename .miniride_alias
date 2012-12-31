@@ -1,1 +1,3 @@
 alias rt_backend='bi; bxrdtc; bxrs && bxcf --format progress'
+alias hlt='heroku logs -t --app miniride-test'
+alias hct='heroku run console --app miniride-test'
