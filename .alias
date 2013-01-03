@@ -8,6 +8,7 @@ alias 'cd..'='cd ..'
 alias pa='ps aux'
 alias t='tree'
 alias pnp='git pull --rebase && git push'
+alias ports='netstat -tulanp'
 # git
 alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
 alias cls_remote_branches='git remote prune origin'
