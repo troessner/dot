@@ -25,8 +25,8 @@ set number
 set list
 " Turn on syntax highlighting
 syntax on
-" Don't tell me how to autoindent
-set noautoindent
+" Use smart indentation
+set smartindent
 " Highlight search results
 set hls
 " Autodetect file types
