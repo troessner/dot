@@ -13,6 +13,7 @@ alias ports='netstat -tulanp'
 alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
 alias cls_remote_branches='git remote prune origin'
 alias sh_exclusive_commits='git log $(git symbolic-ref -q HEAD) --not master --pretty=oneline --abbrev-commit --decorate'
+alias squash_exclusive_commits='git rb -i HEAD~`sh_exclusive_commits | wc -l`'
 #ruby
 alias i='irb'
 # rails 3 specific
