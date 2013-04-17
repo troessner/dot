@@ -44,6 +44,6 @@ if test -f ~/.miniride_alias; then
   source ~/.miniride_alias
 fi
 
-JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
-JDK_HOME=/usr/lib/jvm/java-7-openjdk-i386
+JAVA_HOME=/usr/lib/jvm/default-java
+JDK_HOME=/usr/lib/jvm/default-java
 export PATH=$PATH:/home/troessner/eb/AWS-ElasticBeanstalk-CLI-2.3.1/eb/linux/python2.7
