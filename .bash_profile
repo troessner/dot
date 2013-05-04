@@ -33,6 +33,7 @@ export JAVA_HOME=/usr/lib/jvm/java-6-sun
 export EDITOR=vi
 
 source ~/.alias
+source ~/.hitfox_alias
 
 HISTSIZE=3000
 

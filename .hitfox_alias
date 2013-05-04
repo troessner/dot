@@ -1,0 +1,1 @@
+alias reset_gf_core_test_db='RAILS_ENV=test bxr db:drop db:create db:schema:load'
