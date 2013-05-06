@@ -1,1 +1,2 @@
-alias reset_gf_core_test_db='RAILS_ENV=test bxr db:drop db:create db:schema:load'
+alias reset_gf_core_test_db='cd dummy && RAILS_ENV=test bxr db:drop db:create db:schema:load'
+alias rc_gf_core='cd dummy && rails c'
