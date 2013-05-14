@@ -47,3 +47,7 @@ class Object
     end
   end
 end
+
+if defined?(Rails) && File.exists?("#{Rails.root}/spec/spec_helper.rb")
+  require "#{Rails.root}/spec/spec_helper.rb"
+end
