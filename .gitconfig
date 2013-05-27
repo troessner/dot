@@ -20,6 +20,8 @@
   plr = pull --rebase
   ps = push
   ulc= reset --soft HEAD^
+  c= clean -fd
+[user]
 [user]
   name = Timo Rößner
   email = timo.roessner@googlemail.com
