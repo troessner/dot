@@ -20,7 +20,7 @@ alias squash_exclusive_commits='git rb -i HEAD~`sh_exclusive_commits | wc -l`'
 alias generate_ctags='ctags -R --exclude=.git --exclude=log *'
 #ruby
 alias i='irb'
-# rails 3 specific
+# rails specific
 alias bi='bundle install'
 alias bu='bundle update'
 alias bx='bundle exec'
@@ -37,6 +37,7 @@ alias bs='bundle show'
 alias rt='bxr db:test:clone && bxrs && bxcf'
 alias rtp='bxr parallel:prepare && bxr parallel:spec && bxr parallel:features'
 alias rsdb='bxr db:drop db:create db:schema:load'
+alias rs='spring rspec'
 # Erlang
 alias erl='rlwrap -a erl'
 # Rubinius
