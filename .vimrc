@@ -64,19 +64,18 @@ match WhitespaceEOL /\s\+$/
 hi Visual cterm=reverse term=reverse
 " Enable pasting from external applications like a web browser
 set pastetoggle=<F3>
-
-" Custom functions
-function! s:DiffWithSaved()
-  let filetype=&ft
-  diffthis
-  vnew | r # | normal! 1Gdd
-  diffthis
-  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
-endfunction
-com! DiffSaved call s:DiffWithSaved()
 xnoremap p pgvy
 " Remove all trailing whitespace by pressing F5
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " vim taglist plugin shortcuts
 map <F4> :TlistToggle<CR>
 set modifiable
+" short cuts
+map <leader>t :call RunSpecs()<cr>
+map <leader>ts :call RunSpecsWithSpring()<cr>
+function! RunSpecs()
+  exec ":!bundle exec rspec spec"
+endfunction
+function! RunSpecsWithSpring()
+  exec ":!spring rspec spec"
+endfunction
