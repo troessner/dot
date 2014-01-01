@@ -71,11 +71,82 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 map <F4> :TlistToggle<CR>
 set modifiable
 " short cuts
-map <leader>t :call RunSpecs()<cr>
-map <leader>ts :call RunSpecsWithSpring()<cr>
-function! RunSpecs()
-  exec ":!bundle exec rspec spec"
+map <F9> '. " Jump to last edit location within the same file
+map <leader>t   :call RunCurrentOrLastSpec()<cr>
+map <leader>ts  :call RunCurrentOrLastSpecWithSpring()<cr>
+map <leader>tc  :call RunCurrentOrLastExampleUnderCursor()<cr>
+map <leader>tcs :call RunCurrentOrLastExampleWithSpringUnderCursor()<cr>
+
+function! RunCurrentOrLastSpec()
+  let g:rspec_command = DecoratedSpecCommand(SpecCommand(0))
+  call RunCurrentSpecFile()
 endfunction
-function! RunSpecsWithSpring()
-  exec ":!spring rspec spec"
+
+function! RunCurrentOrLastSpecWithSpring()
+  let g:rspec_command = DecoratedSpecCommand(SpecCommand(1))
+  call RunCurrentSpecFile()
 endfunction
+
+function! RunCurrentOrLastExampleUnderCursor()
+  let g:rspec_command = DecoratedSpecCommand(SpecCommand(0))
+  call RunNearestSpec()
+endfunction
+
+function! RunCurrentOrLastExampleWithSpringUnderCursor()
+  let g:rspec_command = DecoratedSpecCommand(SpecCommand(1))
+  call RunNearestSpec()
+endfunction
+
+function! SpecCommand(useSpring)
+  return a:useSpring ? "spring rspec {spec}" : "bundle exec rspec {spec}"
+endfunction
+
+function! DecoratedSpecCommand(command)
+  return "!echo " . a:command . " && " . a:command
+endfunction
+
+""""""""""""""""""""""""""""""""""""
+" c&p'ed from thoughtbots set up
+""""""""""""""""""""""""""""""""""""
+
+function! RunCurrentSpecFile()
+  if InSpecFile()
+    let l:spec = @%
+    call SetLastSpecCommand(l:spec)
+    call RunSpecs(l:spec)
+  else
+    call RunLastSpec()
+  endif
+endfunction
+
+function! RunNearestSpec()
+  if InSpecFile()
+    let l:spec = @% . ":" . line(".")
+    call SetLastSpecCommand(l:spec)
+    call RunSpecs(l:spec)
+  else
+    call RunLastSpec()
+  endif
+endfunction
+
+function! RunLastSpec()
+  if exists("s:last_spec_command")
+    call RunSpecs(s:last_spec_command)
+  endif
+endfunction
+
+function! InSpecFile()
+  return match(expand("%"), "_spec.rb$") != -1 || match(expand("%"), ".feature$") != -1
+endfunction
+
+function! SetLastSpecCommand(spec)
+  let s:last_spec_command = a:spec
+endfunction
+
+function! RunSpecs(spec)
+  execute substitute(g:rspec_command, "{spec}", a:spec, "g")
+endfunction
+
+""""""""""""""""""""""""""""""""""""
+" END c&p'ed from thoughtbots set up
+""""""""""""""""""""""""""""""""""""
