@@ -45,7 +45,7 @@ set shellcmdflag=-ic
 " Show line numbers
 set number
 " Show special characters in the file.
-set list
+set list listchars=eol:¬
 " Turn on syntax highlighting
 syntax on
 " Indentation settings
