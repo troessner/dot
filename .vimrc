@@ -13,7 +13,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_auto_loc_list=1
 
-" TODO This doesnt work anymore (it does when I c&p it into command mode)
+" TODO This doesnt work anymore when I put the lines below in my settings file
+" when it clearly should -> fix me.
 " Show us trailing whitespace, we don't want that garbage in our source code
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
