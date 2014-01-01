@@ -41,3 +41,6 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " vim taglist plugin shortcuts
 map <F4> :TlistToggle<CR>
+
+" shortcut for 'git status'
+map <leader>gs :Gstatus<CR>

@@ -1,6 +1,4 @@
 " General settings
-" don't need to be compatible with old vim
-set nocompatible
 set showmatch
 set hlsearch                      " highlight all search matches
 set cursorline                    " highlight current line
@@ -32,7 +30,6 @@ set list listchars=eol:¬
 syntax on
 " Indentation settings
 set autoindent
-filetype plugin indent on
 " Highlight search results
 set hls
 " Autodetect file types
