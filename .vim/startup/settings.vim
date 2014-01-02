@@ -13,6 +13,7 @@ set nofoldenable                  " disable code folding
 set clipboard=unnamed             " use the system clipboard
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
+set modifiable
 " put useful info in status bar
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 " Tab settings: We want soft tabs with an indentation of 2.
@@ -40,8 +41,7 @@ let mapleader = ","
 hi Visual cterm=reverse term=reverse
 " Enable pasting from external applications like a web browser
 set pastetoggle=<F3>
-
-set modifiable
-
 " Needed for autoclose to work, see https://github.com/tpope/vim-endwise/issues/25
 autocmd FileType ruby,eruby :let g:AutoCloseExpandEnterOn=""
+" quickfix list: use a new tab or an existing one
+:set switchbuf+=usetab,newtab
