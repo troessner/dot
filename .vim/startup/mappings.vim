@@ -44,3 +44,12 @@ map <F4> :TlistToggle<CR>
 
 " shortcut for 'git status'
 map <leader>gs :Gstatus<CR>
+
+" Shortcuts for opening files from the same directory of the current file
+" See http://vimcasts.org/episodes/the-edit-command/ for details
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
