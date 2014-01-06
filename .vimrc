@@ -21,6 +21,7 @@ Bundle 'Townk/vim-autoclose'
 " Yes, this needs to end with 'vim', see: https://github.com/gmarik/vundle/issues/152
 Bundle 'taglist.vim'
 Bundle 'molokai'
+Bundle 'godlygeek/tabular'
 
 filetype plugin indent on
 
