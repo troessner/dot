@@ -22,6 +22,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'taglist.vim'
 Bundle 'molokai'
 Bundle 'godlygeek/tabular'
+Bundle 'nelstrom/vim-visual-star-search'
 
 filetype plugin indent on
 
