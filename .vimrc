@@ -23,6 +23,7 @@ Bundle 'taglist.vim'
 Bundle 'molokai'
 Bundle 'godlygeek/tabular'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'tpope/vim-abolish'
 
 filetype plugin indent on
 
