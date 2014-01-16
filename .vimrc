@@ -24,16 +24,17 @@ Bundle 'molokai'
 Bundle 'godlygeek/tabular'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'tpope/vim-abolish'
+Bundle 'elixir-lang/vim-elixir'
 
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""
 " load up
 """"""""""""""""""""""""""""""""""""""""""
+source ~/.vim/startup/color.vim
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
-source ~/.vim/startup/color.vim
 
 """"""""""""""""""""""""""""""""""""""""""
 "  Stuff that doesnt work properly yet
@@ -51,3 +52,6 @@ let g:syntastic_auto_loc_list=1
 " Show us trailing whitespace, we don't want that garbage in our source code
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
+" This only works if placed at the very end of the vimrc so I'm probably
+" setting this somewhere else but I have zero clue where.:-/
+hi StatusLine ctermbg=7 ctermfg=16
