@@ -23,6 +23,7 @@
   ps = push
   ulc= reset --soft HEAD^
   c= clean -fd
+  commit-summary=diff-tree --no-commit-id --name-only -r
 [user]
 [user]
   name = Timo Rößner
