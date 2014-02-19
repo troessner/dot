@@ -27,24 +27,11 @@ function prompt {
 }
 prompt
 
-export JDK_HOME=/usr/lib/jvm/java-6-sun
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-
 export EDITOR=vi
-
-source ~/.alias
-source ~/.hitfox_alias
-
 HISTSIZE=3000
 
-if test -f ~/.rvm/scripts/rvm; then
-    [ "$(type -t rvm)" = "function" ] || source ~/.rvm/scripts/rvm
-fi
+source ~/.alias
 
-if test -f ~/.miniride_alias; then
-  source ~/.miniride_alias
-fi
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-JAVA_HOME=/usr/lib/jvm/default-java
-JDK_HOME=/usr/lib/jvm/default-java
-export PATH=$PATH:/home/troessner/eb/AWS-ElasticBeanstalk-CLI-2.3.1/eb/linux/python2.7
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
