@@ -1,3 +1,0 @@
-alias rt_gfc='cd dummy/ && RAILS_ENV=test bxrdcs && cd .. && bundle exec rspec'
-alias rt_gfb='RAILS_ENV=test bxrdcs && bxrs'
-alias rt_apd='RAILS_ENV=test bxrdcs && bxrs && bxcf'
