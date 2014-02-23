@@ -1,0 +1,16 @@
+group :development do
+  gem "pry-rails"
+  gem "pry-plus"
+  gem 'pry-debugger''
+  gem 'hirb'
+  gem "awesome_print"
+  gem "rack-livereload"
+  gem "quiet_assets"
+  gem "spring"
+  gem "xray-rails"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "sextant"
+  gem "letter_opener"
+  gem "bullet"
+end
