@@ -25,7 +25,6 @@
   c= clean -fd
   commit-summary=diff-tree --no-commit-id --name-only -r
 [user]
-[user]
   name = Timo Rößner
   email = timo.roessner@googlemail.com
 [push]
