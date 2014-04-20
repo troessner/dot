@@ -37,6 +37,9 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/hacks.vim
 
+" Prolog needs some special treatment to be recognised by vim.
+au BufNewFile,BufRead,BufReadPost *.pro set filetype=prolog
+
 """"""""""""""""""""""""""""""""""""""""""
 "  Stuff that doesnt work properly yet
 """"""""""""""""""""""""""""""""""""""""""
