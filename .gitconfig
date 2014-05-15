@@ -24,6 +24,8 @@
   ulc= reset --soft HEAD^
   c= clean -fd
   commit-summary=diff-tree --no-commit-id --name-only -r
+  rom= rebase origin/master
+  romi= rebase -i origin/master
 [user]
   name = Timo Rößner
   email = timo.roessner@googlemail.com
