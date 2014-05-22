@@ -17,6 +17,7 @@ alias cls_remote_branches='git remote prune origin'
 alias sh_exclusive_commits='git log $(git symbolic-ref -q HEAD) --not master --pretty=oneline --abbrev-commit --decorate'
 alias squash_exclusive_commits='git rb -i HEAD~`sh_exclusive_commits | wc -l`'
 alias show_my_branches="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | egrep '`git config user.name`'  | sort -k5n -k2M -k3n -k4n"
+alias show_branches_by_last_commit="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
 # vim
 alias generate_ctags='ctags -R --exclude=.git --exclude=log *'
 #ruby
