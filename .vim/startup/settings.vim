@@ -44,4 +44,6 @@ set pastetoggle=<F3>
 " Needed for autoclose to work, see https://github.com/tpope/vim-endwise/issues/25
 autocmd FileType ruby,eruby :let g:AutoCloseExpandEnterOn=""
 " quickfix list: use a new tab or an existing one
-:set switchbuf+=usetab,newtab
+set switchbuf+=usetab,newtab
+" Ignore binaries
+set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pdf,*.bak,*.beam
