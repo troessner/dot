@@ -1,0 +1,7 @@
+[
+{ "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false } },
+{ "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true } },
+{ "keys": ["ctrl+tab"], "command": "next_view" },
+{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+]
+

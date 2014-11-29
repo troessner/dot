@@ -1,0 +1,35 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by file type specific settings.
+{
+  "caret_style": "phase",
+  "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+  "drag_text": false,
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    "doc",
+    "docs",
+    "java-push-engine",
+    "java-websocket",
+    "local_gems",
+    "log",
+    "node_modules"
+  ],
+  "font_size": 10,
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "shift_tab_unindent": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true
+}
+
