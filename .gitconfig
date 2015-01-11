@@ -1,7 +1,8 @@
 [alias]
   ci = commit
   s  = status
-  st = status
+  st = stash
+  sp = stash pop
   a  = add
   d  = diff
   dc = diff --cached
