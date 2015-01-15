@@ -45,6 +45,7 @@ alias hf_rs_db='bxr db:drop db:create db:structure:load'
 alias hf_rs_all_dbs='hf_rs_db && RAILS_ENV=test hf_rs_db'
 # Erlang
 alias erl='rlwrap -a erl'
+alias activate_erlang='. /usr/local/erlang/activate'
 # Rubinius
 alias list_failing_rubinius_specs='bin/mspec tag --list fails -tx19 :ci_files'
 alias rbx_irb='RBXOPT=-X19 bin/irb'
