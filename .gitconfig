@@ -1,23 +1,20 @@
 [alias]
   ci = commit
   s  = status
+  ss = status --short
   st = stash
   sp = stash pop
   a  = add
   d  = diff
-  dc = diff --cached
+  ds = diff --staged
   co = checkout
   b  = branch
   l  = log
   cp = cherry-pick
   rb = rebase
   re = reset
-  reh = reset --hard
-  res = reset --soft
-  lp = log --decorate --pretty=oneline --abbrev-commit
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  ls = ls-files
+  lp = log --patch --decorate --pretty=oneline --abbrev-commit
+  ls = log --stat --decorate --pretty=oneline --abbrev-commit
   sh = show
   pl = pull
   plr = pull --rebase
