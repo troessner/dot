@@ -19,11 +19,10 @@
   pl = pull
   plr = pull --rebase
   ps = push
-  ulc= reset --soft HEAD^
-  c= clean -fd
-  commit-summary=diff-tree --no-commit-id --name-only -r
-  rom= rebase origin/master
-  romi= rebase -i origin/master
+  undo-last= reset --soft HEAD^
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  last-5 = log -5 HEAD
 [user]
   name = Timo Rößner
   email = timo.roessner@googlemail.com
