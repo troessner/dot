@@ -15,7 +15,7 @@
   re = reset
   lp = log --patch --decorate --pretty=oneline --abbrev-commit
   lst = log --stat --decorate --pretty=oneline --abbrev-commit
-  ls = log --decorate --pretty=oneline --abbrev-commit
+  ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   sh = show
   pl = pull
   plr = pull --rebase
