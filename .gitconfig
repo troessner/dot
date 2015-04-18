@@ -1,5 +1,6 @@
 [alias]
   ci = commit
+  cim = commit --amend
   s  = status
   ss = status --short
   st = stash
@@ -14,7 +15,7 @@
   rb = rebase
   re = reset
   lp = log --patch --decorate --pretty=oneline --abbrev-commit
-  lst = log --stat --decorate --pretty=oneline --abbrev-commit
+  lst = log --stat --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   sh = show
   pl = pull
