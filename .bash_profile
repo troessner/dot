@@ -1,3 +1,5 @@
+eval "$(rbenv init -)"
+
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -32,7 +34,6 @@ HISTSIZE=3000
 
 source ~/.alias
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:/usr/local/elixir/bin"
-activate_erlang
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
