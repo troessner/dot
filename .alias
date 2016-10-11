@@ -1,51 +1,6 @@
 # OS
-alias ll='ls -lhF --color=tty'
-alias la='ls -lahF --color=tty'
-alias gr='grep -ir'
-alias g='git'
-alias tf='tail -f -n 200'
-alias 'cd..'='cd ..'
-alias pa='ps aux'
-alias t='tree'
-alias pnp='git pull --rebase && git push'
-alias ports='netstat -tulanp'
-alias update_dot_files='cd ~/dev/dot && git pull origin master && cp .* ~ && cd -'
-alias deep_diff='diff -ENwbur'
-# git
-alias show_committers='git log --pretty=format:%aN | sort | uniq -c | sort -rn'
-alias cls_remote_branches='git remote prune origin'
-alias sh_exclusive_commits='git log $(git symbolic-ref -q HEAD) --not master --pretty=oneline --abbrev-commit --decorate'
-alias squash_exclusive_commits='git rb -i HEAD~`sh_exclusive_commits | wc -l`'
-alias show_my_branches="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | egrep '`git config user.name`'  | sort -k5n -k2M -k3n -k4n"
-alias show_branches_by_last_commit="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
-# vim
-alias generate_ctags='ctags -R --exclude=.git --exclude=log *'
-#ruby
-alias i='irb'
-# rails specific
-alias bi='bundle install'
-alias bu='bundle update'
 alias bx='bundle exec'
-alias bxc='bundle exec cucumber'
 alias bxr='bundle exec rake'
-alias bxrr='bundle exec rspec'
-alias bxrdcs='bundle exec rake db:drop db:create db:schema:load'
-alias bxrdm='bundle exec rake db:migrate'
-alias bxrdtc='bundle exec rake db:test:clone'
-alias bxrs='bundle exec rspec spec/ --drb'
-alias bxcf='bundle exec cucumber features/'
-alias bo='bundle open'
-alias bs='bundle show'
-alias rt='bxr db:test:clone && bxrs && bxcf'
-alias rtp='bxr parallel:prepare && bxr parallel:spec && bxr parallel:features'
-alias rsdb='bxr db:drop db:create db:schema:load'
-alias sr='spring rspec'
-# hitfox
-alias hf_rs_db='bxr db:drop db:create db:structure:load'
-alias hf_rs_all_dbs='hf_rs_db && RAILS_ENV=test hf_rs_db'
-# Erlang
-alias erl='rlwrap -a erl'
-alias activate_erlang='. /usr/local/erlang/activate'
-# Rubinius
-alias list_failing_rubinius_specs='bin/mspec tag --list fails -tx19 :ci_files'
-alias rbx_irb='RBXOPT=-X19 bin/irb'
+alias r_build_1='bxr spec'
+alias r_build_2='bxr test:features'
+alias r_build_3='bxr rubocop test:quality ataru'
