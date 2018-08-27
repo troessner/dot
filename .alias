@@ -4,3 +4,8 @@ alias bxr='bundle exec rake'
 alias r_build_1='bxr spec'
 alias r_build_2='bxr test:features'
 alias r_build_3='bxr rubocop test:quality ataru'
+alias git_prune="git removed-branches --prune"
+# -I -- process a binary file as if it did not contain matching data; 
+# -n -- prefix each line of output with the 1-based line number within its input file
+# -H -- print the file name for each match
+alias ngrep='grep -I -n -H'
