@@ -1,6 +1,6 @@
 [alias]
   ci = commit
-  cim = commit --amend
+  cim = commit --amend --no-edit
   s  = status
   ss = status --short
   st = stash
@@ -22,15 +22,15 @@
   pl = pull
   plr = pull --rebase
   ps = push
+  psf = push -f
   undo-last= reset --soft HEAD^
   unstage = reset HEAD --
   last = log -1 HEAD
   last-5 = log -5 HEAD
+  overview = show --name-status
 [user]
   name = Timo Rößner
   email = timo.roessner@googlemail.com
-[push]
-  default = tracking
 [color]
   ui = auto
 [color "branch"]
@@ -49,5 +49,12 @@
   untracked = cyan
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-[branch "master"]
+  editor = vi
+[includeIf "gitdir:~/code/toptal"]
+  path = ~/code/toptal/.gitconfig
+[push]
+  default = simple
+[pull]
   rebase = true
+[rebase]
+  autosquash = true
