@@ -22,7 +22,7 @@
   pl = pull
   plr = pull --rebase
   ps = push
-  psf = push -f
+  psf = push --force-with-lease
   undo-last= reset --soft HEAD^
   unstage = reset HEAD --
   last = log -1 HEAD
